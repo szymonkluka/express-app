@@ -13,23 +13,23 @@ app.use((req, res, next) => {
 });
 
 app.use(('/user/'), (req, res) => {
-    res.show(`Forbidden.html`);
+    res.status(404).show(`forbidden.html`);
 });
 
 app.get(['/', '/home'], (req, res) => {
-    res.show('Home.html');
+    res.show('home.html');
 });
 
 app.get('/about', (req, res) => {
-    res.show('About.html');
+    res.show('about.html');
 });
 
 app.get('/info', (req, res) => {
-    res.show('Info.html');
+    res.show('info.html');
 });
 
 app.use((req, res) => {
-    res.show('NotFound.html');
+    res.status(404).show('notfound.html');
 });
 
 app.listen(8000, () => {
