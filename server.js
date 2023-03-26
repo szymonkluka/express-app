@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 });
 
 app.use(('/user/'), (req, res) => {
-    res.status(404).show(`forbidden.html`);
+    res.status(403).show(`forbidden.html`);
 });
 
 app.get(['/', '/home'], (req, res) => {
